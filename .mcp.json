@@ -20,6 +20,13 @@
       "headers": {
         "Authorization": "Bearer ${OBSIDIAN_MCP_TOKEN}"
       }
+    },
+    "ha": {
+      "type": "sse",
+      "url": "https://sebas.xvps.jp/mcp_server/sse",
+      "headers": {
+        "Authorization": "Bearer ${HA_MCP_TOKEN}"
+      }
     }
   }
 }
