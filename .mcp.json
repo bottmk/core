@@ -6,6 +6,20 @@
       "headers": {
         "Authorization": "Bearer ${QMD_MCP_TOKEN}"
       }
+    },
+    "notebooklm": {
+      "type": "http",
+      "url": "https://sebas.xvps.jp/mcp",
+      "headers": {
+        "Authorization": "Bearer ${NOTEBOOKLM_MCP_TOKEN}"
+      }
+    },
+    "obsidian": {
+      "type": "http",
+      "url": "https://sebas.xvps.jp/obsidian/mcp",
+      "headers": {
+        "Authorization": "Bearer ${OBSIDIAN_MCP_TOKEN}"
+      }
     }
   }
 }
