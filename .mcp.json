@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "qmd": {
+      "type": "http",
+      "url": "https://sebas.xvps.jp/qmd/mcp",
+      "headers": {
+        "Authorization": "Bearer ${QMD_MCP_TOKEN}"
+      }
+    }
+  }
+}
