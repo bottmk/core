@@ -51,16 +51,7 @@ This repository contains the core of Home Assistant, a Python 3 based home autom
 
 このセクションは upstream home-assistant/core とは無関係な個人運用メモ。upstream への PR では対象外。
 
-### reports への成果物投稿(cloud sandbox から)
+### 共有リソースの入口(cloud sandbox / 他PCから)
 
-図・レポート等のHTML/Markdown成果物をユーザーに見せる価値がある場合、以下でVPSの reports システムに投稿できる。投稿すると `https://sebas.xvps.jp/reports/` の一覧に自動で反映される。
-
-```bash
-CONTENT_B64=$(base64 -w0 report.html)
-curl -X POST https://sebas.xvps.jp/api/reports \
-  -H "Authorization: Bearer ${REPORTS_TOKEN}" \
-  -H "Content-Type: application/json" \
-  -d "{\"filename\": \"report.html\", \"content_base64\": \"${CONTENT_B64}\", \"title\": \"任意のタイトル\"}"
-```
-
-`REPORTS_TOKEN` は cloud environment の環境変数として既に登録済み。レスポンスの `url` フィールドが公開URL。
+qmd/obsidian/notebooklm/HA MCP・reports(図入り報告の投稿・閲覧)等は、`https://sebas.xvps.jp/docs/file-registry.md`
+(basic_auth)先頭の「共有リソース早見」節を参照。使い方・トークン入手先パスをまとめてある。
