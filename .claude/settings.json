@@ -7,6 +7,10 @@
           {
             "type": "command",
             "command": "bash \"$CLAUDE_PROJECT_DIR\"/scripts/restore_codex_auth.sh"
+          },
+          {
+            "type": "command",
+            "command": "gh api repos/bottmk/infra/contents/scripts/check-github-issues.sh --jq \".content\" 2>/dev/null | base64 -d | bash 2>/dev/null || true"
           }
         ]
       }
