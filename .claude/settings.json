@@ -10,7 +10,7 @@
           },
           {
             "type": "command",
-            "command": "gh api repos/bottmk/infra/contents/scripts/check-github-issues.sh --jq \".content\" 2>/dev/null | base64 -d | bash 2>/dev/null || true"
+            "command": "if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then gh api repos/bottmk/infra/contents/scripts/check-github-issues.sh --jq '.content' 2>/dev/null | base64 -d | bash 2>/dev/null || true; elif [ -n \"$GITHUB_ISSUES_TOKEN\" ]; then curl -s -H \"Authorization: Bearer $GITHUB_ISSUES_TOKEN\" https://sebas.xvps.jp/github-issues 2>/dev/null || true; fi"
           }
         ]
       }
